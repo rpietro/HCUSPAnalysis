@@ -27,7 +27,7 @@ library("car")
 #####################################################################################
 
 #if you are using a file that is local to your computer, then replace path below by path to the data file. command will throw all the data into the HCUSP object. replace the word template.data by a name that might easier for you to remember and that represents your data
-HCUSP <- read.csv("/Users/rpietro/Google Drive/R/nonpublicdata_publications/HCUSP/DataHC.csv", sep = ";")
+HCUSP <- read.csv("/Users/rpietro/Google Drive/R/nonpublicdata_publications/HCUSP/DataHC.csv", sep = ";", dec = ",")
 
 
 #below will view data in a spreadsheet format. notice that in this all subsequent commands you have to replace HCUSP with whatever name you chose for your data object in the previous command
@@ -59,6 +59,7 @@ t.test(outcome~predictor)
 
 #chi square test where both outcome and predictor are categorical variables
 CrossTable(outcome, predictor, chisq=TRUE, missing.include=TRUE, format="SAS", prop.r=FALSE)
+
 
 
 ########################################################################################
